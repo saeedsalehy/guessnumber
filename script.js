@@ -22,7 +22,6 @@ console.log(document.querySelector('.guess').value);
 let secretNumber = Math.trunc(Math.random() * 20 + 1); //num is always between 1 and 20 else we dont add '+1', num get between 1 and 19
 let score = 20;
 let highScore = 0;
-document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -69,7 +68,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
-  let secretNumber = Math.trunc(Math.random() * 20 + 1);
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
